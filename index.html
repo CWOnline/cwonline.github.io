@@ -8,7 +8,7 @@
     <title>50 Shades of RGBA</title>
     <meta name=description
         content="Ever wanted 50 Shades of RGBA for absolutely no reason? Me neither, but here it is.">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
     <meta name="theme-color" content="#666a6d">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -16,7 +16,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <style>
         body {
-            background: black;
+            background: grey;
             transition: background 2s ease;
         }
 
@@ -27,21 +27,22 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: grey;
+            font-size: 72px;
+            margin:0px;
+            padding:0px;
         }
     </style>
 </head>
 
 <body>
-    <h1 id="rgba">
-    </h1>
+        <h1 id="rgba">
+        </h1>
 
     <script type="application/javascript">
         var limit = 50,
-            amount = 50,
             lower = 1,
             upper = 254,
             rand_grey = [];
-        if (amount > limit) limit = amount;
 
         while (rand_grey.length < limit) {
             var rand_num = Math.floor(Math.random() * (upper - lower) + lower);
@@ -58,6 +59,13 @@
             }, 3000 * index);
         });
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Roboto']
+            }
+        });
+    </script>
 </body>
-
 </html>
