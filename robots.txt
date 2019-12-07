@@ -1,2 +1,4 @@
 User-agent: *
 Disallow:
+
+sitemap: https://50shadesofrgba.com/sitemap.xml
