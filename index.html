@@ -6,34 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>50 Shades of RGBA</title>
-    <meta name=description content="Ever wanted 50 Shades of RGBA for absolutely no reason? Me neither, but here it is.">
+    <meta name=description
+        content="Ever wanted 50 Shades of RGBA for absolutely no reason? Me neither, but here it is.">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
-    .main {
-        position: relative;
-    }
-    h1 {
-        font-family: 'Roboto', sans-serif;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-    }
+        body {
+            background: black;
+            transition: background 2s ease;
+        }
+
+        #rgba {
+            font-family: 'Roboto', sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: grey;
+        }
     </style>
 </head>
 
 <body>
-    <section id="main">
-        <h1 id="rgba">
-            RGBA
-        </h1>
-    </section>
+    <h1 id="rgba">
+    </h1>
 
     <script type="application/javascript">
-        var num = Math.floor(Math.random() * 253) + 1;
-        document.getElementById("rgba").innerHTML = num;
-        document.body.style.background = 'rgba(' + num +',' + num +',' + num +',1)';
+        var limit = 50,
+            amount = 50,
+            lower = 1,
+            upper = 254,
+            rand_grey = [];
+        if (amount > limit) limit = amount;
+
+        while (rand_grey.length < limit) {
+            var rand_num = Math.floor(Math.random() * (upper - lower) + lower);
+            if (rand_grey.indexOf(rand_num) == -1) {
+                rand_grey.push(rand_num);
+            }
+        }
+
+        //document.getElementById("rgba").innerHTML.append = num;
+
+            rand_grey.forEach((num, index) => {
+                setTimeout(function(){
+                document.body.style.background = 'rgba(' + num + ',' + num + ',' + num + ',1)';
+                var x = document.getElementById("rgba");
+                x.textContent = num;
+                }, 3000 * index);
+            });
+
+
+        //document.getElementById("rgba").innerHTML = rand_grey;
+        //document.body.style.background = 'rgba(' + num +',' + num +',' + num +',1)';
     </script>
 </body>
 
