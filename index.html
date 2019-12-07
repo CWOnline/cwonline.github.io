@@ -26,6 +26,7 @@
             font-size: 72px;
             margin: 0px;
             padding: 0px;
+            opacity:0;
         }
     </style>
     <script>
@@ -48,8 +49,9 @@
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P48ZW8G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1 id="rgba">
+        50 Shades of RGBA
     </h1>
-    <script type="application/javascript">
+    <script>
         var limit = 50,lower = 1,upper = 254,rand_grey = [];
         while (rand_grey.length < limit) {
             var rand_num = Math.floor(Math.random() * (upper - lower) + lower);
@@ -57,10 +59,12 @@
                 rand_grey.push(rand_num);
             }
         }
-        rand_grey.forEach((num, index) => {
+        var x = document.getElementById("rgba");
+        x.style.opacity = 1;
+
+       rand_grey.forEach((num, index) => {
             setTimeout(function () {
                 document.body.style.background = 'rgba(' + num + ',' + num + ',' + num + ',1)';
-                var x = document.getElementById("rgba");
                 x.textContent = num;
             }, 3000 * index);
         });
