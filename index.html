@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>50 Shades of RGBA</title>
-    <meta name=description
-        content="Ever wanted 50 Shades of RGBA for absolutely no reason? Me neither, but here it is.">
-
+    <meta name=description content="Ever wanted 50 Shades of RGBA for absolutely no reason? Me neither, but here it is.">
     <meta name="theme-color" content="#666a6d">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -19,7 +16,6 @@
             background: grey;
             transition: background 2s ease;
         }
-
         #rgba {
             font-family: 'Roboto', sans-serif;
             position: absolute;
@@ -49,27 +45,18 @@
         })(window, document, 'script', 'dataLayer', 'GTM-P48ZW8G');
     </script>
 </head>
-
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P48ZW8G" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P48ZW8G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1 id="rgba">
     </h1>
-
     <script type="application/javascript">
-        var limit = 50,
-            lower = 1,
-            upper = 254,
-            rand_grey = [];
-
+        var limit = 50,lower = 1,upper = 254,rand_grey = [];
         while (rand_grey.length < limit) {
             var rand_num = Math.floor(Math.random() * (upper - lower) + lower);
             if (rand_grey.indexOf(rand_num) == -1) {
                 rand_grey.push(rand_num);
             }
         }
-
         rand_grey.forEach((num, index) => {
             setTimeout(function () {
                 document.body.style.background = 'rgba(' + num + ',' + num + ',' + num + ',1)';
@@ -79,13 +66,6 @@
         });
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script>
-        WebFont.load({
-            google: {
-                families: ['Roboto']
-            }
-        });
-    </script>
+    <script>WebFont.load({google: {families: ['Roboto']}});</script>
 </body>
-
 </html>
