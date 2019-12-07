@@ -1,1 +1,72 @@
-<!DOCTYPE html><html lang="en"><head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <title>50 Shades of RGBA</title> <meta name=description content="Ever wanted 50 Shades of RGBA for absolutely no reason? Me neither, but here it is."> <meta name="theme-color" content="#666a6d"> <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> <link rel="manifest" href="/site.webmanifest"> <style>body{background: grey; transition: background 2s ease;}#rgba{font-family: 'Roboto', sans-serif; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: grey; font-size: 72px; margin: 0px; padding: 0px;}</style> <script>(function (w, d, s, l, i){w[l]=w[l] || []; w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'}); var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l !='dataLayer' ? '&l=' + l : ''; j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);})(window, document, 'script', 'dataLayer', 'GTM-P48ZW8G'); </script></head><body> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P48ZW8G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <h1 id="rgba"> </h1> <script type="application/javascript"> var limit=50,lower=1,upper=254,rand_grey=[]; while (rand_grey.length < limit){var rand_num=Math.floor(Math.random() * (upper - lower) + lower); if (rand_grey.indexOf(rand_num)==-1){rand_grey.push(rand_num);}}rand_grey.forEach((num, index)=>{setTimeout(function (){document.body.style.background='rgba(' + num + ',' + num + ',' + num + ',1)'; var x=document.getElementById("rgba"); x.textContent=num;}, 3000 * index);}); </script> <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script> <script>WebFont.load({google:{families: ['Roboto']}});</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>50 Shades of RGBA</title>
+    <meta name=description content="Ever wanted 50 Shades of RGBA for absolutely no reason? Me neither, but here it is.">
+    <meta name="theme-color" content="#666a6d">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <style>
+        body {
+            background: grey;
+            transition: background 2s ease;
+        }
+        #rgba {
+            font-family: 'Roboto', sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: grey;
+            font-size: 72px;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P48ZW8G');
+    </script>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P48ZW8G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <h1 id="rgba">
+    </h1>
+    <script type="application/javascript">
+        var limit = 50,lower = 1,upper = 254,rand_grey = [];
+        while (rand_grey.length < limit) {
+            var rand_num = Math.floor(Math.random() * (upper - lower) + lower);
+            if (rand_grey.indexOf(rand_num) == -1) {
+                rand_grey.push(rand_num);
+            }
+        }
+        rand_grey.forEach((num, index) => {
+            setTimeout(function () {
+                document.body.style.background = 'rgba(' + num + ',' + num + ',' + num + ',1)';
+                var x = document.getElementById("rgba");
+                x.textContent = num;
+            }, 3000 * index);
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>WebFont.load({google: {families: ['Roboto']}});</script>
+</body>
+<!-- https://50shadesofrgba.com/humans.txt for more info and contact details -->
+</html>
