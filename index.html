@@ -9,6 +9,11 @@
     <meta name=description
         content="Ever wanted 50 Shades of RGBA for absolutely no reason? Me neither, but here it is.">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#666a6d">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <style>
         body {
             background: black;
@@ -45,19 +50,13 @@
             }
         }
 
-        //document.getElementById("rgba").innerHTML.append = num;
-
-            rand_grey.forEach((num, index) => {
-                setTimeout(function(){
+        rand_grey.forEach((num, index) => {
+            setTimeout(function () {
                 document.body.style.background = 'rgba(' + num + ',' + num + ',' + num + ',1)';
                 var x = document.getElementById("rgba");
                 x.textContent = num;
-                }, 3000 * index);
-            });
-
-
-        //document.getElementById("rgba").innerHTML = rand_grey;
-        //document.body.style.background = 'rgba(' + num +',' + num +',' + num +',1)';
+            }, 3000 * index);
+        });
     </script>
 </body>
 

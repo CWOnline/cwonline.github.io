@@ -1,0 +1,8 @@
+# TEAM
+
+    Carl Walker - Developer - carlwalker.online@gmail.com
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, JS
+    GITHub Pages
